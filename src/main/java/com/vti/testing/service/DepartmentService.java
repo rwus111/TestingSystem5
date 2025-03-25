@@ -16,4 +16,9 @@ public class DepartmentService implements IDepartmentService {
     public List<Department> getAllDepartments() {
         return departmentRepository.findAll();
     }
+
+    @Override
+    public List<Department> getDepartmentsByName(String name) {
+        return departmentRepository.findByNameContaining(name);
+    }
 }
