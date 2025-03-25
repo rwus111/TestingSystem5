@@ -21,4 +21,9 @@ public class DepartmentService implements IDepartmentService {
     public List<Department> getDepartmentsByName(String name) {
         return departmentRepository.findByNameContaining(name);
     }
+
+    @Override
+    public List<Department> getDepartmentsTotalMemberByRange(int from, int to) {
+        return departmentRepository.findByTotalMemberBetween(from, to);
+    }
 }

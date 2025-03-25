@@ -8,4 +8,6 @@ import java.util.List;
 public interface IDepartmentRepository extends JpaRepository<Department, Integer> {
     // WHERE name LIKE "%?%"
     List<Department> findByNameContaining(String name);
+
+    List<Department> findByTotalMemberBetween(int from, int to);
 }

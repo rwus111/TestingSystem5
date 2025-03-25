@@ -8,4 +8,6 @@ public interface IDepartmentService {
     List<Department> getAllDepartments();
 
     List<Department> getDepartmentsByName(String name);
+
+    List<Department> getDepartmentsTotalMemberByRange(int from, int to);
 }

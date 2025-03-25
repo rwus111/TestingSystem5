@@ -25,4 +25,9 @@ public class DepartmentController {
     public List<Department> getDepartmentsByName(@PathVariable String name) {
         return departmentService.getDepartmentsByName(name);
     }
+
+    @GetMapping("totalmember/range")
+    public List<Department> getDepartmentsTotalMemberByRange(int from, int to){
+        return departmentService.getDepartmentsTotalMemberByRange(from, to);
+    }
 }
