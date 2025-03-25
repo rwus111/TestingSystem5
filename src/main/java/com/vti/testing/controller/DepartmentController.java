@@ -3,10 +3,7 @@ package com.vti.testing.controller;
 import com.vti.testing.entity.Department;
 import com.vti.testing.service.IDepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +26,10 @@ public class DepartmentController {
     @GetMapping("totalmember/range")
     public List<Department> getDepartmentsTotalMemberByRange(int from, int to){
         return departmentService.getDepartmentsTotalMemberByRange(from, to);
+    }
+
+    @DeleteMapping("name/{name}")
+    public void deleteByName(@PathVariable String name){
+        departmentService.deleteByName(name);
     }
 }

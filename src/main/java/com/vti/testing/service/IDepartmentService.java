@@ -10,4 +10,6 @@ public interface IDepartmentService {
     List<Department> getDepartmentsByName(String name);
 
     List<Department> getDepartmentsTotalMemberByRange(int from, int to);
+
+    void deleteByName(String name);
 }
